@@ -1,14 +1,15 @@
 # Config file for automatic testing at travis-ci.org
 # This file will be regenerated if you run travis_pypi_setup.py
-
+env:
+    - ARCH=x86
 language: python
-
+sudo: false
 python:
   - "2.7"
-
 cache:
   directories:
     - "$HOME/.pip-cache/"
+    - "/home/travis/virtualenv/python2.7"
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -r requirements.txt  --download-cache $HOME/.pip-cache
