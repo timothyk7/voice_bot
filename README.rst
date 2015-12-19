@@ -2,9 +2,6 @@
 Voice Bot
 ===============================
 
-.. image:: https://img.shields.io/travis/timothyk7/voice_bot.svg
-        :target: https://travis-ci.org/timothyk7/voice_bot
-
 .. image:: https://readthedocs.org/projects/voice_bot/badge/?version=latest
         :target: https://readthedocs.org/projects/voice_bot/?badge=latest
         :alt: Documentation Status
