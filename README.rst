@@ -2,9 +2,6 @@
 Voice Bot
 ===============================
 
-.. image:: https://img.shields.io/pypi/v/voice_bot.svg
-        :target: https://pypi.python.org/pypi/voice_bot
-
 .. image:: https://img.shields.io/travis/timothyk7/voice_bot.svg
         :target: https://travis-ci.org/timothyk7/voice_bot
 
