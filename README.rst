@@ -28,9 +28,9 @@ Prerequisites
 Credits
 ---------
 
-`SpeechRecognition <https://pypi.python.org/pypi/SpeechRecognition/>`_.
+`SpeechRecognition <https://pypi.python.org/pypi/SpeechRecognition/>`_
 
-`Wit.ai <https://wit.ai/docs>`_.
+`Wit.ai <https://wit.ai/docs>`_
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
