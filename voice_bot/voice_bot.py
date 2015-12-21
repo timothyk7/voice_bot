@@ -10,7 +10,7 @@ class Bob:
 
 	def run(self):
 		conversation = Conversation(self.name)
-		conversation.dummyFunction()
+		conversation.listen()
 
 if __name__ == "__main__":
 	bob = Bob()

@@ -17,8 +17,22 @@ Features
 
 * TODO
 
+SetUp
+--------
+
+Prerequisites
+* Install libsox and libcurl for Wit.ai
+* Install PyAudio and Flac for SpeechRecognition
+
+
 Credits
 ---------
+
+SpeechRecognition_
+.. _SpeechRecognition: https://pypi.python.org/pypi/SpeechRecognition/
+
+`Wit.ai`_
+.. _`Wit.ai`: https://wit.ai/docs
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 

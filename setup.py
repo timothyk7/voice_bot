@@ -17,12 +17,14 @@ with open('HISTORY.rst') as history_file:
 requirements = [
     "pyaudio",
     "SpeechRecognition",
-    "argparse"
+    "argparse",
+    "requests",
+    "wit"
 ]
-#flac
 
 test_requirements = [
     # TODO: put package test requirements here
+    "nose"
 ]
 
 setup(
