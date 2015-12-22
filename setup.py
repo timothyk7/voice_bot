@@ -17,7 +17,6 @@ with open('HISTORY.rst') as history_file:
 requirements = [
     "pyaudio",
     "SpeechRecognition",
-    "argparse",
     "requests",
     "wit"
 ]
