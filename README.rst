@@ -6,6 +6,9 @@ Voice Bot
         :target: https://readthedocs.org/projects/voice_bot/?badge=latest
         :alt: Documentation Status
 
+.. image:: https://api.codacy.com/project/badge/grade/50657079b6b444d6a575b46023b27d18
+    :target: https://www.codacy.com/app/timothyk7/voice_bot
+
 
 Voice bot that can perform various tasks. 
 
