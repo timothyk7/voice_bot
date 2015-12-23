@@ -29,7 +29,7 @@ Prerequisites:
 * Install PyAudio and Flac for SpeechRecognition
 
 Steps:
- 1. In config folder, update API keys in template_api.ini
+ 1. In voice_bot/config , update API keys in template_api.ini
  2. Change name from template_api.ini --> priv_api.ini
 
 
