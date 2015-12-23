@@ -24,8 +24,8 @@ SetUp
 --------
 
 Prerequisites:
-* Install libsox and libcurl for Wit.ai
-* Install PyAudio and Flac for SpeechRecognition
+ * Install libsox and libcurl for Wit.ai
+ * Install PyAudio and Flac for SpeechRecognition
 
 Steps:
  1. In voice_bot/config , update API keys in template_api.ini
