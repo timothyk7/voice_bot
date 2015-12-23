@@ -1,17 +1,23 @@
 import wit
 import json
 import logging
+import ConfigParser
 
 import speech_recognition as sr
 
 from os import system
+from config import config_manager
 
 class Conversation:
 	def __init__(self, name, recognizer):
 		self._logger = logging.getLogger(__name__)
 		self.name = name
 		self.recognizer = recognizer
-		self.WIT_AI_KEY = "7H4YZTGMNPABHZRLCTEPCYM25LMH2X5Y"
+
+		config_parser = ConfigParser.ConfigParser()
+		config_file = config_manager.get_api_config_file()
+		config_parser.read(config_file)
+		self.WIT_AI_KEY = config_parser.get('WIT_AI', 'API')
 
 	def listen(self):
 		"""
