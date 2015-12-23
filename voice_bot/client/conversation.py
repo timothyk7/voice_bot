@@ -14,6 +14,10 @@ class Conversation:
 		self.WIT_AI_KEY = "7H4YZTGMNPABHZRLCTEPCYM25LMH2X5Y"
 
 	def listen(self):
+		"""
+		
+	    Start voice robot to listen for commands
+	    """
 		wit.init()
 		turnoff = False
 		while not turnoff:
@@ -22,7 +26,7 @@ class Conversation:
 				self._logger.info("Microphone started")
 				audio = self.recognizer.listen(source)
 
-			cmd = self.ai(audio)
+			cmd = self._ai(audio)
 
 			if (cmd == "stop"):
 				turnoff = True
@@ -30,7 +34,16 @@ class Conversation:
 
 		system("say Good bye")
 
-	def ai(self, audio):
+	def _ai(self, audio):
+		"""
+
+	    Processes and performs actions based on commands
+	    Arguments:
+        	audio -- audio from microphone
+	    Returns:
+	        String
+	    """
+
 		cmd = ""
 
 		try:
