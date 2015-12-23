@@ -24,7 +24,6 @@ SetUp
 --------
 
 Prerequisites:
-
 * Install libsox and libcurl for Wit.ai
 * Install PyAudio and Flac for SpeechRecognition
 
