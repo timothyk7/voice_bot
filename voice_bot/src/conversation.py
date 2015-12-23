@@ -1,10 +1,14 @@
 import wit
 import json
+import logging
 
 import speech_recognition as sr
 
+from os import system
+
 class Conversation:
 	def __init__(self, name, recognizer):
+		self._logger = logging.getLogger(__name__)
 		self.name = name
 		self.recognizer = recognizer
 		self.WIT_AI_KEY = "7H4YZTGMNPABHZRLCTEPCYM25LMH2X5Y"
@@ -15,7 +19,7 @@ class Conversation:
 		while not turnoff:
 
 			with sr.Microphone() as source:
-				print("Say something!")
+				self._logger.info("Microphone started")
 				audio = self.recognizer.listen(source)
 
 			cmd = self.ai(audio)
@@ -24,23 +28,23 @@ class Conversation:
 				turnoff = True
 		wit.close()
 
-		print "Good bye"
+		system("say Good bye")
 
 	def ai(self, audio):
 		cmd = ""
 
 		try:
 			cmd = self.recognizer.recognize_wit(audio, key=self.WIT_AI_KEY)
-			print(self.name + " thinks you said: " + cmd)
+			self._logger.debug(self.name + " thinks you said: " + cmd)
 
 			if (cmd != None and cmd != ""):
 				response = wit.text_query(cmd, self.WIT_AI_KEY)
 				parsed = json.loads(response)
-				print json.dumps(parsed, sort_keys=True, indent=4, separators=(',', ': '))
+				self._logger.debug(json.dumps(parsed, sort_keys=True, indent=4, separators=(',', ': ')))
 
 		except sr.UnknownValueError:
-			print(self.name + " could not understand audio")
+			self._logger.error(self.name + " could not understand audio")
 		except sr.RequestError as e:
-			print("Could not request results from " + self.name + " service; {0}".format(e))
+			self._logger.error("Could not request results from " + self.name + " service; {0}".format(e))
 
 		return cmd
