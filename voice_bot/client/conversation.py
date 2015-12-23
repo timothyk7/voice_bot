@@ -15,7 +15,6 @@ class Conversation:
 
 	def listen(self):
 		"""
-		
 	    Start voice robot to listen for commands
 	    """
 		wit.init()
@@ -36,12 +35,11 @@ class Conversation:
 
 	def _ai(self, audio):
 		"""
-
 	    Processes and performs actions based on commands
-	    Arguments:
-        	audio -- audio from microphone
-	    Returns:
-	        String
+	    :param audio: audio from microphone
+	    :type audio: audio
+	    :return: command
+	    :rtype: str
 	    """
 
 		cmd = ""

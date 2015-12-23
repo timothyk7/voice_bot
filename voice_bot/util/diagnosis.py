@@ -6,11 +6,10 @@ logger = logging.getLogger(__name__)
 def check_network_connection(server="www.google.com"):
     """
     Checks if voice bot can connect a network server.
-    Arguments:
-        server -- (optional) the server to connect with (Default:
-                  "www.google.com")
-    Returns:
-        True or False
+    :param server: (optional) the server to connect with (Default: "www.google.com")
+    :type server: str
+    :returns: whether there is a network connection
+    :rtype: bool
     """
     logger = logging.getLogger(__name__)
     logger.debug("Checking network connection to server '%s'...", server)
